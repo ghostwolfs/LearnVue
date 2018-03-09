@@ -5,6 +5,17 @@
 		<title>todolist Vue</title>
 	</head>
 	<body>
-		aaa	
+		<div id="todo_box">
+			<input v-model="addthing" v-on:keyup.enter="addtask" placeholder="add task">
+			<ul>
+				<li v-for="item,index in todolist">
+					{{item}}
+					<button v-on:click="remove(index)">X</button>
+				</li>
+			</ul>
+		</div>
+
+		<script src="../vue.js"></script>
+		<script src="todolist.js"></script>
 	</body>
 </html>
