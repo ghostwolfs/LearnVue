@@ -1,0 +1,22 @@
+#auto-box ul,li{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+#auto-box ul{
+	width: 173px;
+}
+#auto-box ul li{
+	width: 173px;
+	border: 1px solid rgb(238, 238, 238);
+	border-top: none;
+	padding: 1px 0px;
+	height: 23px;
+	display: inline-block;
+	text-align: center; 
+	cursor: pointer;
+}
+.index_in{
+	background-color: red; 
+}

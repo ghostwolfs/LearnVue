@@ -3,12 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<title>autocomplete by Vue</title>
+		<link rel="stylesheet" type="text/css" href="autocomplete.css">
 	</head>
 	<body>
 		<div id="auto-box">
-			<input type="text" v-model="new_input" placeholder="autocomplete" v-on:keyup="auto_change">
+			<input type="text" v-model="new_input" placeholder="autocomplete" v-on:keyup="auto_change($event)">
 			<ul>
-				<li v-for="item in select_content">{{item}}</li>
+				<li is="li-item" v-for="(item,index) in select_content" v-bind:item="item" v-bind:index="index" v-bind:ary="select_content" v-bind:input="new_input" v-on:change="select_li(index)"></li>
 			</ul>
 		</div>
 
