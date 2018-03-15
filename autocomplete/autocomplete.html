@@ -9,7 +9,8 @@
 		<div id="auto-box">
 			<input type="text" v-model="new_input" placeholder="autocomplete" v-on:keyup="auto_change($event)">
 			<ul>
-				<li is="li-item" v-for="(item,index) in select_content" v-bind:item="item" v-bind:index="index" v-bind:ary="select_content" v-bind:input="new_input" v-on:change="select_li(index)"></li>
+				<li is="li-item" v-for="(item,index) in select_content" v-bind:item="item" v-bind:index="index" v-bind:ary="select_content" v-bind:input="new_input" v-on:select="select_li(index)"
+				v-on:reset="reset_index" v-on:change="focus_change(index)"></li>
 			</ul>
 		</div>
 
